@@ -4,19 +4,20 @@
 // https://github.com/ssg-wsg/Sample-Codes
 // ============================================================
 
-// -------------------- Common Enums --------------------
+// -------------------- Common Constants --------------------
 
-export enum ModeOfTraining {
-  CLASSROOM = "1",
-  ASYNCHRONOUS_ELEARNING = "2",
-  IN_HOUSE = "3",
-  ON_THE_JOB = "4",
-  PRACTICAL_PRACTICUM = "5",
-  SUPERVISED_FIELD = "6",
-  TRAINEESHIP = "7",
-  ASSESSMENT = "8",
-  SYNCHRONOUS_ELEARNING = "9",
-}
+export const ModeOfTraining = {
+  CLASSROOM: "1",
+  ASYNCHRONOUS_ELEARNING: "2",
+  IN_HOUSE: "3",
+  ON_THE_JOB: "4",
+  PRACTICAL_PRACTICUM: "5",
+  SUPERVISED_FIELD: "6",
+  TRAINEESHIP: "7",
+  ASSESSMENT: "8",
+  SYNCHRONOUS_ELEARNING: "9",
+} as const;
+export type ModeOfTraining = (typeof ModeOfTraining)[keyof typeof ModeOfTraining];
 
 export const ModeOfTrainingLabels: Record<ModeOfTraining, string> = {
   [ModeOfTraining.CLASSROOM]: "Classroom",
@@ -30,11 +31,12 @@ export const ModeOfTrainingLabels: Record<ModeOfTraining, string> = {
   [ModeOfTraining.SYNCHRONOUS_ELEARNING]: "Synchronous E-Learning",
 };
 
-export enum IdType {
-  NRIC = "SB",
-  FIN = "SO",
-  OTHERS = "OT",
-}
+export const IdType = {
+  NRIC: "SB",
+  FIN: "SO",
+  OTHERS: "OT",
+} as const;
+export type IdType = (typeof IdType)[keyof typeof IdType];
 
 export const IdTypeLabels: Record<IdType, string> = {
   [IdType.NRIC]: "Singapore Blue IC",
@@ -42,22 +44,25 @@ export const IdTypeLabels: Record<IdType, string> = {
   [IdType.OTHERS]: "Others",
 };
 
-export enum CollectionStatus {
-  PENDING_PAYMENT = "Pending Payment",
-  PARTIAL_PAYMENT = "Partial Payment",
-  FULL_PAYMENT = "Full Payment",
-}
+export const CollectionStatus = {
+  PENDING_PAYMENT: "Pending Payment",
+  PARTIAL_PAYMENT: "Partial Payment",
+  FULL_PAYMENT: "Full Payment",
+} as const;
+export type CollectionStatus = (typeof CollectionStatus)[keyof typeof CollectionStatus];
 
-export enum SponsorshipType {
-  EMPLOYER = "EMPLOYER",
-  INDIVIDUAL = "INDIVIDUAL",
-}
+export const SponsorshipType = {
+  EMPLOYER: "EMPLOYER",
+  INDIVIDUAL: "INDIVIDUAL",
+} as const;
+export type SponsorshipType = (typeof SponsorshipType)[keyof typeof SponsorshipType];
 
-export enum Vacancy {
-  AVAILABLE = "A",
-  FULL = "F",
-  LIMITED = "L",
-}
+export const Vacancy = {
+  AVAILABLE: "A",
+  FULL: "F",
+  LIMITED: "L",
+} as const;
+export type Vacancy = (typeof Vacancy)[keyof typeof Vacancy];
 
 export const VacancyLabels: Record<Vacancy, string> = {
   [Vacancy.AVAILABLE]: "Available",
@@ -65,44 +70,50 @@ export const VacancyLabels: Record<Vacancy, string> = {
   [Vacancy.LIMITED]: "Limited Vacancy",
 };
 
-export enum Grade {
-  A = "A",
-  B = "B",
-  C = "C",
-  D = "D",
-  E = "E",
-  F = "F",
-}
+export const Grade = {
+  A: "A",
+  B: "B",
+  C: "C",
+  D: "D",
+  E: "E",
+  F: "F",
+} as const;
+export type Grade = (typeof Grade)[keyof typeof Grade];
 
-export enum Results {
-  PASS = "Pass",
-  FAIL = "Fail",
-  EXEMPT = "Exempt",
-}
+export const Results = {
+  PASS: "Pass",
+  FAIL: "Fail",
+  EXEMPT: "Exempt",
+} as const;
+export type Results = (typeof Results)[keyof typeof Results];
 
-export enum SortField {
-  UPDATED_ON = "updatedOn",
-  CREATED_ON = "createdOn",
-}
+export const SortField = {
+  UPDATED_ON: "updatedOn",
+  CREATED_ON: "createdOn",
+} as const;
+export type SortField = (typeof SortField)[keyof typeof SortField];
 
-export enum SortOrder {
-  ASC = "asc",
-  DESC = "desc",
-}
+export const SortOrder = {
+  ASC: "asc",
+  DESC: "desc",
+} as const;
+export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder];
 
-export enum AssessmentAction {
-  UPDATE = "update",
-  VOID = "void",
-}
+export const AssessmentAction = {
+  UPDATE: "update",
+  VOID: "void",
+} as const;
+export type AssessmentAction = (typeof AssessmentAction)[keyof typeof AssessmentAction];
 
-export enum Salutation {
-  MR = "1",
-  MS = "2",
-  MDM = "3",
-  MRS = "4",
-  DR = "5",
-  PROF = "6",
-}
+export const Salutation = {
+  MR: "1",
+  MS: "2",
+  MDM: "3",
+  MRS: "4",
+  DR: "5",
+  PROF: "6",
+} as const;
+export type Salutation = (typeof Salutation)[keyof typeof Salutation];
 
 export const SalutationLabels: Record<Salutation, string> = {
   [Salutation.MR]: "Mr",
@@ -113,21 +124,23 @@ export const SalutationLabels: Record<Salutation, string> = {
   [Salutation.PROF]: "Prof",
 };
 
-export enum TrainerType {
-  EXISTING = "1",
-  NEW = "2",
-}
+export const TrainerType = {
+  EXISTING: "1",
+  NEW: "2",
+} as const;
+export type TrainerType = (typeof TrainerType)[keyof typeof TrainerType];
 
 export const TrainerTypeLabels: Record<TrainerType, string> = {
   [TrainerType.EXISTING]: "Existing",
   [TrainerType.NEW]: "New",
 };
 
-export enum Role {
-  TRAINER = "1",
-  ASSESSOR = "2",
-  TRAINER_ASSESSOR = "3",
-}
+export const Role = {
+  TRAINER: "1",
+  ASSESSOR: "2",
+  TRAINER_ASSESSOR: "3",
+} as const;
+export type Role = (typeof Role)[keyof typeof Role];
 
 export const RoleLabels: Record<Role, string> = {
   [Role.TRAINER]: "Trainer",
@@ -135,18 +148,20 @@ export const RoleLabels: Record<Role, string> = {
   [Role.TRAINER_ASSESSOR]: "Trainer & Assessor",
 };
 
-export enum Attendance {
-  CONFIRMED = "1",
-  UNCONFIRMED = "2",
-  REJECTED = "3",
-}
+export const Attendance = {
+  CONFIRMED: "1",
+  UNCONFIRMED: "2",
+  REJECTED: "3",
+} as const;
+export type Attendance = (typeof Attendance)[keyof typeof Attendance];
 
-export enum SurveyLanguage {
-  ENGLISH = "EL",
-  MANDARIN = "MN",
-  MALAY = "MY",
-  TAMIL = "TM",
-}
+export const SurveyLanguage = {
+  ENGLISH: "EL",
+  MANDARIN: "MN",
+  MALAY: "MY",
+  TAMIL: "TM",
+} as const;
+export type SurveyLanguage = (typeof SurveyLanguage)[keyof typeof SurveyLanguage];
 
 // -------------------- Shared Types --------------------
 

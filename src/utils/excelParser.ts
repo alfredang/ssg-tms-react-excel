@@ -213,7 +213,7 @@ export const parseCourseRunsSheet = (
     run.scheduleInfoType = scheduleInfoType;
     run.courseVacancy = courseVacancy;
 
-    runs.push(run as CourseRunInfo & { courseReferenceNumber: string });
+    runs.push(run as unknown as CourseRunInfo & { courseReferenceNumber: string });
   });
 
   return { sheetName: "Course Runs", data: runs, errors };

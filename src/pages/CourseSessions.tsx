@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form, Input, Button, Table, Card, DatePicker, Space, message, Switch } from "antd";
+import type { Dayjs } from "dayjs";
 import { SearchOutlined } from "@ant-design/icons";
 import PageHeader from "../components/PageHeader";
 import ExcelUpload from "../components/ExcelUpload";
@@ -16,7 +17,7 @@ const CourseSessions: React.FC = () => {
   const handleSearch = async (values: {
     runId: string;
     courseReferenceNumber: string;
-    sessionMonth?: ReturnType<typeof import("dayjs")["default"]>;
+    sessionMonth?: Dayjs;
     includeExpired?: boolean;
   }) => {
     const uen = import.meta.env.VITE_SSG_UEN || "";

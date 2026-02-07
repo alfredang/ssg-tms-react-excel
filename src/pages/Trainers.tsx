@@ -27,13 +27,12 @@ import {
   RoleLabels,
   IdType,
   IdTypeLabels,
-  Salutation,
   SalutationLabels,
 } from "../types";
 import type { TrainerInfo } from "../types";
 
 const Trainers: React.FC = () => {
-  const [retrieveForm] = Form.useForm();
+  const [_retrieveForm] = Form.useForm();
   const [addForm] = Form.useForm();
   const [updateForm] = Form.useForm();
   const [deleteForm] = Form.useForm();

@@ -4,7 +4,6 @@ import {
   Form,
   Input,
   Button,
-  Table,
   Card,
   DatePicker,
   Select,
@@ -28,7 +27,6 @@ import {
 import { parseCourseRunsSheet } from "../utils/excelParser";
 import { validateCourseRun } from "../utils/validators";
 import {
-  ModeOfTraining,
   ModeOfTrainingLabels,
   Vacancy,
   VacancyLabels,
